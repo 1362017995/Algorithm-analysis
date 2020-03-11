@@ -1,4 +1,10 @@
-﻿#include "pch.h"
+﻿/*
+10
+1 2 3 4 5 6 7 8 9 10
+*/
+
+
+#include "pch.h"
 #include <iostream>
 
 int Order_search(int A[], int n, int key) {
@@ -38,7 +44,12 @@ int Binary_search(int A[], int n, int key) {
 
 int main()
 {
-	int a[] = { 0,1,2,3,4,5,6,7,8,9 };
-	printf("%d\n", Order_search(a, 10, 7));
-	printf("%d\n", Binary_search(a, 10, 8));
+	int n,a[100];
+	scanf_s("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	printf("%d\n", Order_search(a, n, 7));
+	printf("%d\n", Binary_search(a, n, 8));
 }
