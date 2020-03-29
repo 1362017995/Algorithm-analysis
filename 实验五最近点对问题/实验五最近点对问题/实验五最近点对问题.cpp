@@ -65,7 +65,7 @@ double efficientClosestPair(MyStruct P[],int n) {
 		m = P[n / 2].x;
 		for (int i = 0; i < n; i++)
 		{
-			if (P[i].x-m<d)
+			if (fabs(P[i].x-m)<d)
 			{
 				s[num++] = P[i];
 			}
