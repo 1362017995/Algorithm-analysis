@@ -1,0 +1,10 @@
+﻿  实验九LCS算法.cpp
+c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(65): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(65): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(65): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(65): note: 此参数用作缓冲区大小
+c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(69): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(69): note: 占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(69): note: 缺失的可变参数 2 为格式字符串“%c”所需
+  c:\users\夜猫sama\source\repos\实验九lcs算法\实验九lcs算法\实验九lcs算法.cpp(69): note: 此参数用作缓冲区大小
+  实验九LCS算法.vcxproj -> C:\Users\夜猫Sama\source\repos\实验九LCS算法\Debug\实验九LCS算法.exe
