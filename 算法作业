@@ -1,0 +1,53 @@
+public class m {
+    public static void main(String[] args) {
+        int[] p = {30, 35, 15, 5, 10, 20, 25};
+        int n = p.length-1;
+        int[][] m = new int[n][n];
+        int[][] s = new int [n-1][n];
+        //初始化单个矩阵，单个矩阵不用相乘
+        for (int i = 0; i < n; i++) {
+            m[i][i] = 0;
+        }
+        //划分分界点，默认第一个矩阵为分割点
+        for (int l = 2; l <= n; l++) {//母链
+            for (int i = 0; i+l <= n; i++) {//划分子链
+                int j = i+l-1;//子链长度
+                m[i][j] = Integer.MAX_VALUE;
+                for (int k = i; k < j; k++) {//假设子链是在k断开为最优
+                    int temp = m[i][k] + m[k+1][j] + p[i]*p[k+1]*p[j+1];
+                    if (temp < m[i][j]){
+                        m[i][j] = temp;
+                        s[i][j] = k;
+                    }
+                }
+            }
+        }
+        //输出计算代价的矩阵m，其最终结果是矩阵m[0][m.length-1]
+        System.out.println("该矩阵链的最小计算次数：" + m[0][n - 1]);
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                System.out.print(m[i][j] + "  \t  ");
+            }
+            System.out.println();
+        }
+        //输出构造最优解的分割点矩阵
+        printOptimalPatterns(s,0,n-1);
+        System.out.println();
+        for (int i = 0; i < s.length; i++) {
+            for (int j = 0; j < s[i].length; j++) {
+                System.out.print(s[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+    static void  printOptimalPatterns(int[][] s, int i, int j){
+        if (i== j){
+            System.out.print("A" + (i+1));
+        }else{
+            System.out.print("(");
+            printOptimalPatterns(s,i,s[i][j]);
+            printOptimalPatterns(s,s[i][j]+1,j);
+            System.out.print(")");
+        }
+    }
+}
